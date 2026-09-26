@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSE8603 App Shell — Amir</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- javascript -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- bracket .app -->
+  <div class="app">
+    
+    <nav class="sidebar" aria-label="Main">
+      <!-- Logo -->
+      <div class="stack">
+        <h1>Acme Tasks</h1>
+        <p class="tagline">Your personal task board</p>
+      </div>
+
+      <ul class="stack" style="list-style: none; padding-left: 0;">
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#items">Items</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    <main id="dashboard">
+      <!-- header and status .cluster, .badge -->
+      <header class="topbar cluster">
+        <h2>Dashboard</h2>
+        <span class="badge">Draft UI</span> 
+      </header>
+      
+      <p>Welcome. This shell will become our React UI later.</p>
+
+      <section id="items" aria-labelledby="items-heading">
+        <h2 id="items-heading">Items</h2>
+        
+        <!-- forms .panel, .stack -->
+        <form id="create-item" class="panel stack">
+          <label>Title
+            <input name="title" type="text" required minlength="2" placeholder="Buy notebooks" />
+          </label>
+          
+          <label>Priority
+            <select name="priority">
+              <option value="low">Low</option>
+              <option value="medium" selected>Medium</option>
+              <option value="high">High</option>
+            </select>
+          </label>
+          
+          <!-- btn -->
+          <button type="submit" class="btn">Create item</button>
+        </form>
+        
+        <!-- cards bracket .cards, .panel -->
+        <ul class="cards" style="list-style: none; padding: 0;">
+          <li class="panel">
+            <strong>Example item</strong> (static for now)
+          </li>
+          <li class="panel">
+            <strong>Buy notebooks</strong> — Medium
+          </li>
+        </ul>
+      </section>
+      
+      <footer>
+        <small>CSE8603 · Satbayev University · Autumn 2026–2027</small>
+      </footer>
+    </main>
+  </div>
+  <pre id = "out"></pre>
+</body>
+</html>
